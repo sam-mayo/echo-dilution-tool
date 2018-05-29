@@ -1,0 +1,29 @@
+<!DOCTYPE html>  
+<html>  
+<head>
+	<meta charset=utf-8 />
+	<title>Practice Layout</title>
+	<link rel="stylesheet" type="text/css" href=".\practiceLayout.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src=".\practiceLayout.js"></script>
+</head>  
+<body onload="menuPopulate();">
+	<h2>Echo Dilution Tool</h2>
+	<form>
+		Plate map:
+		<select id="plateMaps"></select><br><br>
+		Dilution factor:
+		<input type="text" id="dilutionFactor" style="width:50px"><br><br>
+		Dilution points:
+		<input type="text" id="dilutionPoints" style="width:50px"><br><br>
+		Target volume (nL):
+		<input type="text" id="targetVolume" style="width:50px"><br><br>
+		Stock concentration (mM):
+		<input type="text" id="stockConc" style="width:50px"><br><br>
+	</form>
+	<button>Generate CSV(s)</button>
+	<!---<button onclick="displayPlateMap()">Display</button><br><br>
+	You have chosen the following plate map: <div id="displayZone"></div>--->
+</body>  
+</html>

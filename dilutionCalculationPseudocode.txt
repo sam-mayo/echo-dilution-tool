@@ -1,0 +1,28 @@
+E30 plate map
+
+2-fold dilution
+10 dilution points
+target volume is 100nL
+stock concentration is 10mM to start
+
+// create target concentrations
+for each dilution point
+	divide stock concentration by 2^dilution point index
+
+// create dispense volume list
+for each dilution point
+	divide target volume by adjusted stock concentration over initial stock concentration
+	divide target volume by 2^dilution point index to yield dispense volume
+	if dispense volume is not divisible by 2.5
+		divide adjusted stock concentration by 10 and try dividing again
+	else if dispense volume is divisible by 2.5
+		add dispense volume to running list of dispense volumes
+
+find closest number divisible by 2.5 if dispense volume is greater than 100
+
+
+// new way of doing things
+multiply target dispense volume by 10 until divisible by 2.5
+if the result is greater than or equal to 100, divide by 10
+take result and find closest number divisible by 2.5
+result is new dispense volume

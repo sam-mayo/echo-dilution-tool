@@ -1,0 +1,16 @@
+body {
+	font-family: Roboto, sans-serif;
+	padding-left: 15px;
+}
+
+form {
+	font-size: 17px;
+}
+
+select,button {
+	font-size: 15px;
+}
+
+#displayZone {
+	display: inline-block;
+}

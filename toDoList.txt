@@ -1,0 +1,9 @@
+To Do List:
+
+/	Write the logic for calculating dilution volumes and additional source plates
+/	Sit down with Corrie and figure out how she goes from parameters and plate map to CSV file. This will determine the business logic of the webtool.
+-	Define list of desired webtool characteristics and abilities. This does NOT mean to tackle them all at once, but to ensure that the feature list informs software development.
+
+- : not started
+/ : in progress
++ : finished
