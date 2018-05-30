@@ -14,6 +14,7 @@ var arrDmsoVols = [];
 var arrAdjStockConcs = [];
 var arrPercentAcc = [];
 var arrPercentAccCompare = [];
+var distinctElementsFinderResults = [];
 
 // MAIN SCRIPT
 
@@ -69,11 +70,15 @@ for (i=0;i<dilutionPoints;i++) {
 	arrPercentAcc[i] = (100*(arrDispenseVols[i]/arrPercentAccCompare[i])).toFixed(1);
 }
 
+// Find distinct source plate concentrations
+distinctElementsFinderResults = distinctElementsFinder(arrAdjStockConcs);
+
 // Display results
 console.log("Compound dispense volumes:   " + arrDispenseVols);
 console.log("Percent accuracy:            " + arrPercentAcc);
 console.log("DMSO dispense volumes:       " + arrDmsoVols);
 console.log("Source plate concentrations: " + arrAdjStockConcs);
+console.log("There are " + distinctElementsFinderResults[0] + " distinct source plate concentrations and they are: " + distinctElementsFinderResults[1]);
 
 // FUNCTIONS
 
@@ -108,4 +113,25 @@ function findClosestNumber(n,m) {
 	} else {
 		return n2;
 	}
+}
+
+// Finds how many distinct elements are in a sorted array and reports what the values are
+function distinctElementsFinder(array) {
+	var distinctElements = 0;
+	var arrDistinctElements = [];
+	var currentValue = 0;
+	var testValue = 0;
+	currentValue = array[0];
+	testValue = array[0];
+	arrDistinctElements[0] = currentValue;
+	for (i=0;i<array.length;i++) {
+		testValue = array[i];
+		if (testValue !== currentValue) {
+			distinctElements++;
+			arrDistinctElements[distinctElements] = testValue;
+			currentValue = testValue;
+		}
+	}
+
+	return [distinctElements+1,arrDistinctElements];
 }
