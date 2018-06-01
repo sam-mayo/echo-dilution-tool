@@ -9,14 +9,16 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "no-console": "off",
         "indent": [
             "error",
             "tab"
         ],
-        "linebreak-style": [
+        "linebreak-style": "off",
+        /*"linebreak-style": [
             "error",
-            "unix"
-        ],
+            "windows"
+        ],*/
         "quotes": [
             "error",
             "double"
