@@ -116,13 +116,13 @@ function findClosestNumber(n,m) {
 	}
 }
 
-// Finds how many distinct elements are in a sorted array and reports what the values are
+// Finds how many distinct elements are in a large-to-small sorted array and reports what the values are
 function findDistinctElements(array) {
 	var distinctElements = 0; // Number of distinct elements in the input array
 	var arrDistinctElements = []; // Array of distinct elements from input array
 	var currentValue = array[0]; // Value of the most recent distinct element
 	var testValue = array[0]; // Value from input array that is tested against currentValue
-	arrDistinctElements[0] = currentValue; // Set first element in distinct elements array to first element in input (ordered) array, which is necessarily distinct
+	arrDistinctElements[0] = currentValue; // Set first element in distinct elements array to first element in input array, which is necessarily distinct
 	// Iterate over input array and test each element for distinctness
 	// If the test input element (testValue) is different from the most recent distinct element (currentValue), add the test input element to the array of distinct elements
 	// This test input element then becomes the new most recent distinct element and the number of distinct elements is incremented
